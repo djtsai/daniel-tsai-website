@@ -1,0 +1,15 @@
+{
+  "slices": {},
+  "_cts": {
+    "page": {},
+    "home-page": {},
+    "menu": {
+      "title": {
+        "config": {
+          "patternType": "HEADING",
+          "blocks": 1
+        }
+      }
+    }
+  }
+}
