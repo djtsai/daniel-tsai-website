@@ -1,5 +1,7 @@
 {
-  "slices": {},
+  "slices": {
+    "BannerSlice": {}
+  },
   "_cts": {
     "page": {},
     "home-page": {},

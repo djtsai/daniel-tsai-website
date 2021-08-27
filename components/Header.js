@@ -3,7 +3,7 @@ import { RichText, Link } from 'prismic-reactjs';
 import { Nav, Navbar } from "react-bootstrap";
 
 const Header = ({ menu = [] }) => (
-  <Navbar sticky="top" bg="dark" variant="dark" expand="md">
+  <Navbar fixed="top" bg="dark" variant="dark" expand="md">
     <Navbar.Brand href="/">{RichText.asText(menu.data.title)}</Navbar.Brand>
     <Navbar.Toggle aria-controls="main-navbar-nav"/>
     <Navbar.Collapse id="main-navbar-nav">
