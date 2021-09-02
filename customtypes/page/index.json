@@ -18,6 +18,9 @@
           "choices": {
             "banner_slice": {
               "type": "SharedSlice"
+            },
+            "full_width_image": {
+              "type": "SharedSlice"
             }
           }
         }
