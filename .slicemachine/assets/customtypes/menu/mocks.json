@@ -1,47 +1,29 @@
 {
-  "id": "1473c772-4a4b-4ef2-bbd3-b8acfcac2f5f",
-  "uid": "cum-magnam-et",
+  "id": "32bd5a52-5767-4309-a6a1-31396ad166c8",
+  "uid": "aut-qui-rem",
   "type": "menu",
   "data": {
     "title": [
       {
         "type": "heading1",
-        "text": "Reinvent wireless partnerships",
+        "text": "Engineer integrated functionalities",
         "spans": []
       }
     ],
+    "githubLink": {
+      "link_type": "Web",
+      "url": "https://slicemachine.dev"
+    },
+    "linkedInLink": {
+      "link_type": "Web",
+      "url": "http://twitter.com"
+    },
     "menu_links": [
       {
         "label": [
           {
             "type": "paragraph",
-            "text": "Magna veniam labore pariatur do do voluptate deserunt deserunt aliquip et laborum reprehenderit nisi sit. Ad elit commodo duis sit sint nulla reprehenderit ad exercitation. Ullamco id pariatur cillum incididunt nisi.",
-            "spans": []
-          }
-        ],
-        "link": {
-          "link_type": "Web",
-          "url": "http://twitter.com"
-        }
-      },
-      {
-        "label": [
-          {
-            "type": "paragraph",
-            "text": "Labore aliquip cupidatat anim fugiat aliqua qui amet. Ipsum irure sit est consequat sunt dolor labore ut sunt aute laboris culpa. Velit id dolor adipisicing labore nisi minim.",
-            "spans": []
-          }
-        ],
-        "link": {
-          "link_type": "Web",
-          "url": "http://twitter.com"
-        }
-      },
-      {
-        "label": [
-          {
-            "type": "paragraph",
-            "text": "Dolore ipsum minim commodo elit sunt aliqua anim nostrud officia nisi dolore ut non enim ex. Sunt ea ea veniam sint non ea reprehenderit ad exercitation occaecat veniam exercitation nisi.",
+            "text": "Dolor amet nisi officia consectetur dolore fugiat magna nulla amet est exercitation. Commodo fugiat quis sunt irure. Est labore commodo dolor aute enim id cupidatat incididunt ipsum laborum ad in.",
             "spans": []
           }
         ],
@@ -54,7 +36,33 @@
         "label": [
           {
             "type": "paragraph",
-            "text": "Dolor consectetur aliqua consectetur nostrud sunt mollit anim. Eu velit pariatur proident laboris reprehenderit nisi qui duis est tempor adipisicing labore. Cupidatat proident eu in minim proident reprehenderit ipsum.",
+            "text": "Nisi mollit et aliquip veniam voluptate velit qui.",
+            "spans": []
+          }
+        ],
+        "link": {
+          "link_type": "Web",
+          "url": "http://google.com"
+        }
+      },
+      {
+        "label": [
+          {
+            "type": "paragraph",
+            "text": "Reprehenderit ea veniam in aute enim veniam ea esse cupidatat qui Lorem irure id. Adipisicing laboris culpa et.",
+            "spans": []
+          }
+        ],
+        "link": {
+          "link_type": "Web",
+          "url": "https://slicemachine.dev"
+        }
+      },
+      {
+        "label": [
+          {
+            "type": "paragraph",
+            "text": "Voluptate enim sint commodo cupidatat irure culpa sunt nostrud veniam tempor irure. Duis voluptate irure laboris Lorem amet cillum deserunt fugiat sint consectetur quis pariatur laborum nisi.",
             "spans": []
           }
         ],
@@ -67,13 +75,13 @@
         "label": [
           {
             "type": "paragraph",
-            "text": "Lorem Lorem minim amet ea nisi id proident consequat.",
+            "text": "Sint pariatur laborum sit irure consectetur consectetur adipisicing consectetur fugiat et incididunt sint. Enim dolor non est aliquip duis dolore consequat et cillum qui ut excepteur. Exercitation Lorem reprehenderit enim deserunt qui ut ipsum laboris ea elit adipisicing.",
             "spans": []
           }
         ],
         "link": {
           "link_type": "Web",
-          "url": "http://twitter.com"
+          "url": "https://slicemachine.dev"
         }
       }
     ]

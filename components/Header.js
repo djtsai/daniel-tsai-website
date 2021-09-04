@@ -1,6 +1,9 @@
 import React from "react";
 import { RichText, Link } from 'prismic-reactjs';
 import { Nav, Navbar } from "react-bootstrap";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from "@fortawesome/free-brands-svg-icons/faGithub";
+import { faLinkedin } from "@fortawesome/free-brands-svg-icons/faLinkedin";
 
 const Header = ({ menu = [] }) => (
   <Navbar fixed="top" bg="dark" variant="dark" expand="md">
@@ -13,6 +16,18 @@ const Header = ({ menu = [] }) => (
             {RichText.asText(menu_link.label)}
           </Nav.Link>
         ))}
+      </Nav>
+      <Nav>
+        {menu.data.githubLink && (
+          <Nav.Link href={Link.url(menu.data.githubLink)}>
+            <FontAwesomeIcon icon={faGithub} /> GitHub
+          </Nav.Link>
+        )}
+        {menu.data.linkedInLink && (
+          <Nav.Link href={Link.url(menu.data.linkedInLink)}>
+            <FontAwesomeIcon icon={faLinkedin} /> LinkedIn
+          </Nav.Link>
+        )}
       </Nav>
     </Navbar.Collapse>
   </Navbar>

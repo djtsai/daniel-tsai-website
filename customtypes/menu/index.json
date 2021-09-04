@@ -35,6 +35,24 @@
           },
           "label": "Menu Links"
         }
+      },
+      "githubLink": {
+        "config": {
+          "label": "GitHub Link",
+          "placeholder": "",
+          "select": "web",
+          "allowTargetBlank": false
+        },
+        "type": "Link"
+      },
+      "linkedInLink": {
+        "config": {
+          "label": "LinkedIn Link",
+          "placeholder": "",
+          "select": "web",
+          "allowTargetBlank": false
+        },
+        "type": "Link"
       }
     }
   }
