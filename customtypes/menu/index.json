@@ -13,6 +13,17 @@
           "single": "heading1"
         }
       },
+      "profileImage": {
+        "config": {
+          "label": "Profile Image",
+          "constraint": {
+            "width": 32,
+            "height": 32
+          },
+          "thumbnails": []
+        },
+        "type": "Image"
+      },
       "menu_links": {
         "type": "Group",
         "config": {

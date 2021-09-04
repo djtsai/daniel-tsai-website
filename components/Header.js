@@ -7,8 +7,14 @@ import { faLinkedin } from "@fortawesome/free-brands-svg-icons/faLinkedin";
 
 const Header = ({ menu = [] }) => (
   <Navbar fixed="top" bg="dark" variant="dark" expand="md">
-    <Navbar.Brand href="/">{RichText.asText(menu.data.title)}</Navbar.Brand>
-    <Navbar.Toggle aria-controls="main-navbar-nav"/>
+    <Navbar.Brand href="/">
+      {menu.data.profileImage.url ? (
+        <img className="profile-image" src={menu.data.profileImage.url} alt={menu.data.profileImage.alt} width="32" />
+      ) : (
+        RichText.asText(menu.data.title)
+      )}
+    </Navbar.Brand>
+    <Navbar.Toggle aria-controls="main-navbar-nav" />
     <Navbar.Collapse id="main-navbar-nav">
       <Nav className="me-auto">
         {menu.data.menu_links.map((menu_link) => (
