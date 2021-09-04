@@ -21,6 +21,9 @@
             },
             "full_width_image": {
               "type": "SharedSlice"
+            },
+            "featured_image": {
+              "type": "SharedSlice"
             }
           }
         }

@@ -1,7 +1,8 @@
 {
   "slices": {
     "BannerSlice": {},
-    "FullWidthImage": {}
+    "FullWidthImage": {},
+    "FeaturedImage": {}
   },
   "_cts": {
     "page": {},
