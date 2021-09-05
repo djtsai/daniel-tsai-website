@@ -18,7 +18,7 @@ const Header = ({ menu = [] }) => (
     <Navbar.Collapse id="main-navbar-nav">
       <Nav className="me-auto">
         {menu.data.menu_links.map((menu_link) => (
-          <Nav.Link key={menu_link.link} href={Link.url(menu_link.link)}>
+          <Nav.Link key={RichText.asText(menu_link.label)} href={Link.url(menu_link.link)}>
             {RichText.asText(menu_link.label)}
           </Nav.Link>
         ))}

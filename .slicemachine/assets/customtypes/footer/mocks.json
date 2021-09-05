@@ -1,0 +1,138 @@
+{
+  "id": "685a75b1-1f05-485a-bbfa-0292f89a05b2",
+  "uid": "fugiat-dignissimos-soluta",
+  "type": "footer",
+  "data": {
+    "navLinks": [
+      {
+        "link": {
+          "link_type": "Web",
+          "url": "https://slicemachine.dev"
+        },
+        "label": [
+          {
+            "type": "paragraph",
+            "text": "Et laboris cillum enim ea ea exercitation enim voluptate labore mollit. Excepteur esse sunt tempor aliquip culpa labore sint do tempor exercitation pariatur sint nostrud.",
+            "spans": []
+          }
+        ]
+      },
+      {
+        "link": {
+          "link_type": "Web",
+          "url": "http://twitter.com"
+        },
+        "label": [
+          {
+            "type": "paragraph",
+            "text": "Aliqua veniam fugiat magna laborum Lorem eiusmod ex excepteur excepteur ea id incididunt sit veniam. Pariatur adipisicing dolore anim eu incididunt consequat ipsum anim adipisicing duis. Esse consectetur duis ea.",
+            "spans": []
+          }
+        ]
+      },
+      {
+        "link": {
+          "link_type": "Web",
+          "url": "https://slicemachine.dev"
+        },
+        "label": [
+          {
+            "type": "paragraph",
+            "text": "Ut id proident aute voluptate aute proident reprehenderit aliqua veniam aliqua. Ad amet eu aute.",
+            "spans": []
+          }
+        ]
+      },
+      {
+        "link": {
+          "link_type": "Web",
+          "url": "https://prismic.io"
+        },
+        "label": [
+          {
+            "type": "paragraph",
+            "text": "Labore ex duis ipsum aliqua non sunt et. Non mollit laborum officia consectetur in reprehenderit mollit laboris.",
+            "spans": []
+          }
+        ]
+      },
+      {
+        "link": {
+          "link_type": "Web",
+          "url": "http://twitter.com"
+        },
+        "label": [
+          {
+            "type": "paragraph",
+            "text": "Qui ex pariatur aliquip nisi sunt culpa eu exercitation.",
+            "spans": []
+          }
+        ]
+      },
+      {
+        "link": {
+          "link_type": "Web",
+          "url": "http://twitter.com"
+        },
+        "label": [
+          {
+            "type": "paragraph",
+            "text": "Qui pariatur cillum tempor magna eu nostrud ex enim consequat deserunt tempor. Pariatur ea nisi laboris ex ad. Et aliquip elit laboris deserunt nostrud eiusmod deserunt.",
+            "spans": []
+          }
+        ]
+      },
+      {
+        "link": {
+          "link_type": "Web",
+          "url": "http://google.com"
+        },
+        "label": [
+          {
+            "type": "paragraph",
+            "text": "Consectetur laboris incididunt sit pariatur Lorem exercitation.",
+            "spans": []
+          }
+        ]
+      }
+    ],
+    "texts": [
+      {
+        "text": [
+          {
+            "type": "paragraph",
+            "text": "In ad deserunt ad. Ipsum pariatur qui aute magna qui quis est sit deserunt labore magna voluptate nisi occaecat. Tempor enim Lorem commodo ut mollit anim nostrud consectetur deserunt ad laborum minim consequat enim proident.",
+            "spans": []
+          }
+        ]
+      },
+      {
+        "text": [
+          {
+            "type": "paragraph",
+            "text": "Nisi amet dolor qui tempor eiusmod non. Lorem aliqua sit consequat exercitation pariatur adipisicing anim adipisicing officia proident incididunt aliquip. Laborum aute occaecat ullamco velit elit irure sint esse sit enim.",
+            "spans": []
+          }
+        ]
+      },
+      {
+        "text": [
+          {
+            "type": "paragraph",
+            "text": "Deserunt et ut minim magna anim pariatur anim dolore ad ad eiusmod ad. Aliquip nulla sit eu qui sint ut excepteur. Aliqua magna consectetur magna nisi consectetur consectetur tempor et non quis.",
+            "spans": []
+          }
+        ]
+      },
+      {
+        "text": [
+          {
+            "type": "paragraph",
+            "text": "Enim cillum excepteur esse adipisicing et fugiat incididunt qui nostrud aliqua esse irure commodo consequat. Veniam culpa nulla sunt aliquip dolore eu incididunt ad adipisicing. Nostrud id magna exercitation reprehenderit est fugiat est consectetur enim non qui eiusmod et ut eu.",
+            "spans": []
+          }
+        ]
+      }
+    ]
+  }
+}

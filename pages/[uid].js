@@ -8,7 +8,7 @@ import Layout from "./../components/Layout";
 
 const Page = (props) => {
   return (
-    <Layout menu={props.menu}>
+    <Layout menu={props.menu} footer={props.footer}>
       <Head>
         <title>{props.data.meta_title}</title>
         <meta name='description' content={props.data.meta_description} />

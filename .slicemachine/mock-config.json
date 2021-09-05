@@ -2,7 +2,8 @@
   "slices": {
     "BannerSlice": {},
     "FullWidthImage": {},
-    "FeaturedImage": {}
+    "FeaturedImage": {},
+    "TextSlice": {}
   },
   "_cts": {
     "page": {},
@@ -12,6 +13,24 @@
         "config": {
           "patternType": "HEADING",
           "blocks": 1
+        }
+      }
+    },
+    "footer": {
+      "navLinks": {
+        "label": {
+          "config": {
+            "patternType": "PARAGRAPH",
+            "blocks": 1
+          }
+        }
+      },
+      "texts": {
+        "text": {
+          "config": {
+            "patternType": "PARAGRAPH",
+            "blocks": 1
+          }
         }
       }
     }

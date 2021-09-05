@@ -7,9 +7,11 @@ export default class MyApp extends NextApp {
   static async getInitialProps(appCtx) {
     const client = Client();
     const menu = (await client.getSingle("menu")) || {};
+    const footer = (await client.getSingle("footer")) || {};
     return {
       props: {
-        menu: menu
+        menu: menu,
+        footer: footer
       },
     };
   }
@@ -17,7 +19,7 @@ export default class MyApp extends NextApp {
   render() {
     const { Component, pageProps, props } = this.props
     return (
-      <Component {...pageProps} menu={props.menu} />
+      <Component {...pageProps} menu={props.menu} footer={props.footer} />
     )
   }
 }
