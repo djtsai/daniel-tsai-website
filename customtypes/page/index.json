@@ -27,6 +27,9 @@
             },
             "text_slice": {
               "type": "SharedSlice"
+            },
+            "timeline_slice": {
+              "type": "SharedSlice"
             }
           }
         }
