@@ -14,7 +14,7 @@ const BannerSlice = ({ slice }) => (
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 100vh;
+        height: ${ slice.variation === 'halfBanner' ? '50vh' : '100vh' };
         background-position: center center;
         background-size: cover;
         color: #ffffff;
