@@ -37,11 +37,15 @@
               }
             },
             "link": {
-              "type": "Link",
               "config": {
                 "label": "Link",
-                "placeholder": "Select a Link..."
-              }
+                "select": "document",
+                "customtypes": [
+                  "home-page",
+                  "page"
+                ]
+              },
+              "type": "Link"
             }
           },
           "label": "Menu Links"

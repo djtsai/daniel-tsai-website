@@ -13,9 +13,11 @@
             "link": {
               "config": {
                 "label": "Link",
-                "placeholder": "",
-                "select": "web",
-                "allowTargetBlank": false
+                "select": "document",
+                "customtypes": [
+                  "home-page",
+                  "page"
+                ]
               },
               "type": "Link"
             },

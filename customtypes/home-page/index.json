@@ -23,10 +23,10 @@
             "full_width_image": {
               "type": "SharedSlice"
             },
-            "featured_image": {
+            "text_slice": {
               "type": "SharedSlice"
             },
-            "text_slice": {
+            "featured_image": {
               "type": "SharedSlice"
             }
           }
