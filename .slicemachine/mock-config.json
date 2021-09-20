@@ -5,7 +5,8 @@
     "FeaturedImage": {},
     "TextSlice": {},
     "TimelineSlice": {},
-    "CardSlice": {}
+    "CardSlice": {},
+    "GoogleFormSlice": {}
   },
   "_cts": {
     "page": {},

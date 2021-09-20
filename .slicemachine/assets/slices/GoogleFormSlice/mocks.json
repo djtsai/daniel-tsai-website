@@ -1,0 +1,14 @@
+[
+  {
+    "variation": "default-slice",
+    "name": "Default slice",
+    "slice_type": "google_form_slice",
+    "items": [],
+    "primary": {
+      "googleFormLink": {
+        "link_type": "Web",
+        "url": "https://prismic.io"
+      }
+    }
+  }
+]
