@@ -30,6 +30,9 @@
             },
             "featured_image": {
               "type": "SharedSlice"
+            },
+            "card_slice": {
+              "type": "SharedSlice"
             }
           }
         }

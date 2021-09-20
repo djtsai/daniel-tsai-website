@@ -1,0 +1,36 @@
+{
+  "id": "card_slice",
+  "type": "SharedSlice",
+  "name": "CardSlice",
+  "description": "CardSlice",
+  "variations": [
+    {
+      "id": "default-slice",
+      "name": "Default slice",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "CardSlice",
+      "primary": {},
+      "items": {
+        "cardTitle": {
+          "config": {
+            "label": "Card Title",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "heading4,heading5,heading6"
+          },
+          "type": "StructuredText"
+        },
+        "cardDescription": {
+          "config": {
+            "label": "Card Description",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "list-item"
+          },
+          "type": "StructuredText"
+        }
+      }
+    }
+  ]
+}

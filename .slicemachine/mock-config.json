@@ -4,7 +4,8 @@
     "FullWidthImage": {},
     "FeaturedImage": {},
     "TextSlice": {},
-    "TimelineSlice": {}
+    "TimelineSlice": {},
+    "CardSlice": {}
   },
   "_cts": {
     "page": {},
