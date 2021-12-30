@@ -36,6 +36,9 @@
             },
             "google_form_slice": {
               "type": "SharedSlice"
+            },
+            "experience_cards_slice": {
+              "type": "SharedSlice"
             }
           }
         }

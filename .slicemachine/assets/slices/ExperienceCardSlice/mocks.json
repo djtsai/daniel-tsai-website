@@ -1,0 +1,130 @@
+[
+  {
+    "variation": "default-slice",
+    "name": "Default slice",
+    "slice_type": "experience_cards_slice",
+    "items": [
+      {
+        "companyName": [
+          {
+            "type": "heading4",
+            "text": "Visualize granular blockchains",
+            "spans": []
+          }
+        ],
+        "jobTitle": [
+          {
+            "type": "heading5",
+            "text": "Syndicate mission-critical mindshare",
+            "spans": []
+          }
+        ],
+        "dateString": "implement e-business deliverables",
+        "description": [
+          {
+            "type": "paragraph",
+            "text": "Consectetur minim reprehenderit sunt proident ex cillum id est nisi laboris. Minim elit Lorem Lorem consequat.",
+            "spans": []
+          }
+        ]
+      },
+      {
+        "companyName": [
+          {
+            "type": "heading4",
+            "text": "Scale B2B bandwidth",
+            "spans": []
+          }
+        ],
+        "jobTitle": [
+          {
+            "type": "heading5",
+            "text": "Scale synergistic infrastructures",
+            "spans": []
+          }
+        ],
+        "dateString": "engineer bricks-and-clicks synergies",
+        "description": [
+          {
+            "type": "paragraph",
+            "text": "Sint ea sint eiusmod anim cillum.",
+            "spans": []
+          }
+        ]
+      },
+      {
+        "companyName": [
+          {
+            "type": "heading4",
+            "text": "Unleash transparent e-tailers",
+            "spans": []
+          }
+        ],
+        "jobTitle": [
+          {
+            "type": "heading5",
+            "text": "Strategize collaborative metrics",
+            "spans": []
+          }
+        ],
+        "dateString": "redefine compelling eyeballs",
+        "description": [
+          {
+            "type": "paragraph",
+            "text": "Eiusmod sint fugiat ea et consectetur duis quis esse sint.",
+            "spans": []
+          }
+        ]
+      },
+      {
+        "companyName": [
+          {
+            "type": "heading4",
+            "text": "Productize customized vortals",
+            "spans": []
+          }
+        ],
+        "jobTitle": [
+          {
+            "type": "heading5",
+            "text": "Deliver value-added systems",
+            "spans": []
+          }
+        ],
+        "dateString": "visualize user-centric platforms",
+        "description": [
+          {
+            "type": "paragraph",
+            "text": "Fugiat sunt ut sint.",
+            "spans": []
+          }
+        ]
+      },
+      {
+        "companyName": [
+          {
+            "type": "heading4",
+            "text": "Brand dot-com solutions",
+            "spans": []
+          }
+        ],
+        "jobTitle": [
+          {
+            "type": "heading5",
+            "text": "Embrace integrated platforms",
+            "spans": []
+          }
+        ],
+        "dateString": "deliver wireless channels",
+        "description": [
+          {
+            "type": "paragraph",
+            "text": "Incididunt ut consequat enim est id pariatur. Ex dolor quis amet voluptate nostrud eiusmod officia commodo. Incididunt commodo ex non labore sint non culpa mollit aliqua excepteur magna labore.",
+            "spans": []
+          }
+        ]
+      }
+    ],
+    "primary": {}
+  }
+]

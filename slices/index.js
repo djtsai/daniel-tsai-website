@@ -2,6 +2,7 @@
 
 export { default as BannerSlice } from './BannerSlice'
 export { default as CardSlice } from './CardSlice'
+export { default as ExperienceCardsSlice } from './ExperienceCardsSlice'
 export { default as FeaturedImage } from './FeaturedImage'
 export { default as FullWidthImage } from './FullWidthImage'
 export { default as GoogleFormSlice } from './GoogleFormSlice'

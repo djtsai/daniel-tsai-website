@@ -1,13 +1,5 @@
 {
-  "slices": {
-    "BannerSlice": {},
-    "FullWidthImage": {},
-    "FeaturedImage": {},
-    "TextSlice": {},
-    "TimelineSlice": {},
-    "CardSlice": {},
-    "GoogleFormSlice": {}
-  },
+  "slices": {},
   "_cts": {
     "page": {},
     "home-page": {},

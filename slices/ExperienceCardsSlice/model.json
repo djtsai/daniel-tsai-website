@@ -1,0 +1,52 @@
+{
+  "id": "experience_cards_slice",
+  "type": "SharedSlice",
+  "name": "ExperienceCardsSlice",
+  "description": "ExperienceCardsSlice",
+  "variations": [
+    {
+      "id": "default-slice",
+      "name": "Default slice",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "ExperienceCardsSlice",
+      "primary": {},
+      "items": {
+        "companyName": {
+          "config": {
+            "label": "Company Name",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "heading4,heading5,heading6"
+          },
+          "type": "StructuredText"
+        },
+        "jobTitle": {
+          "config": {
+            "label": "Job Title",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "heading5,heading6"
+          },
+          "type": "StructuredText"
+        },
+        "dateString": {
+          "config": {
+            "label": "Date String",
+            "placeholder": ""
+          },
+          "type": "Text"
+        },
+        "description": {
+          "config": {
+            "label": "Description",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,list-item,heading5,heading6"
+          },
+          "type": "StructuredText"
+        }
+      }
+    }
+  ]
+}
