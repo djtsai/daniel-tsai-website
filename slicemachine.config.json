@@ -1,0 +1,5 @@
+{
+  "repositoryName": "daniel-tsai-website",
+  "adapter": "@slicemachine/adapter-next",
+  "libraries": ["./slices"]
+}
