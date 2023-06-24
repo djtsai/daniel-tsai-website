@@ -5,6 +5,412 @@ import type * as prismic from "@prismicio/client";
 type Simplify<T> = {
   [KeyType in keyof T]: T[KeyType];
 };
+/** Content for Footer documents */
+interface FooterDocumentData {
+  /**
+   * Nav Links field in *Footer*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.navLinks[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/group
+   *
+   */
+  navLinks: prismic.GroupField<Simplify<FooterDocumentDataNavLinksItem>>;
+  /**
+   * Texts field in *Footer*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.texts[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/group
+   *
+   */
+  texts: prismic.GroupField<Simplify<FooterDocumentDataTextsItem>>;
+}
+/**
+ * Item in Footer → Nav Links
+ *
+ */
+export interface FooterDocumentDataNavLinksItem {
+  /**
+   * Link field in *Footer → Nav Links*
+   *
+   * - **Field Type**: Content Relationship
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.navLinks[].link
+   * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+   *
+   */
+  link: prismic.ContentRelationshipField<"home-page" | "page">;
+  /**
+   * Label field in *Footer → Nav Links*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.navLinks[].label
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+   *
+   */
+  label: prismic.RichTextField;
+}
+/**
+ * Item in Footer → Texts
+ *
+ */
+export interface FooterDocumentDataTextsItem {
+  /**
+   * Text field in *Footer → Texts*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.texts[].text
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+   *
+   */
+  text: prismic.RichTextField;
+}
+/**
+ * Footer document from Prismic
+ *
+ * - **API ID**: `footer`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type FooterDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithoutUID<
+    Simplify<FooterDocumentData>,
+    "footer",
+    Lang
+  >;
+/** Content for Home Page documents */
+interface HomePageDocumentData {
+  /**
+   * Slice Zone field in *Home Page*
+   *
+   * - **Field Type**: Slice Zone
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home-page.slices[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/slices
+   *
+   */
+  slices: prismic.SliceZone<HomePageDocumentDataSlicesSlice>;
+  /**
+   * Meta Title field in *Home Page*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: My title for Search Engine
+   * - **API ID Path**: home-page.meta_title
+   * - **Tab**: SEO Metadata
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  meta_title: prismic.KeyTextField;
+  /**
+   * Meta Description field in *Home Page*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: The description that will appear in search engine
+   * - **API ID Path**: home-page.meta_description
+   * - **Tab**: SEO Metadata
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  meta_description: prismic.KeyTextField;
+  /**
+   * `social_cards` field in *Home Page*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home-page.social_cards[]
+   * - **Tab**: SEO Metadata
+   * - **Documentation**: https://prismic.io/docs/core-concepts/group
+   *
+   */
+  social_cards: prismic.GroupField<
+    Simplify<HomePageDocumentDataSocialCardsItem>
+  >;
+}
+/**
+ * Slice for *Home Page → Slice Zone*
+ *
+ */
+type HomePageDocumentDataSlicesSlice =
+  | BannerSliceSlice
+  | TextSliceSlice
+  | FullWidthImageSlice
+  | BannerSlice
+  | FeaturedImageSlice
+  | TextSlice;
+/**
+ * Item in Home Page → `social_cards`
+ *
+ */
+export interface HomePageDocumentDataSocialCardsItem {
+  /**
+   * Social Card Image field in *Home Page → `social_cards`*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home-page.social_cards[].social_card_image
+   * - **Documentation**: https://prismic.io/docs/core-concepts/image
+   *
+   */
+  social_card_image: prismic.ImageField<never>;
+  /**
+   * Social Card Title field in *Home Page → `social_cards`*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home-page.social_cards[].social_card_title
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  social_card_title: prismic.KeyTextField;
+  /**
+   * Social card description field in *Home Page → `social_cards`*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home-page.social_cards[].social_card_description
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  social_card_description: prismic.KeyTextField;
+}
+/**
+ * Home Page document from Prismic
+ *
+ * - **API ID**: `home-page`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type HomePageDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithUID<
+    Simplify<HomePageDocumentData>,
+    "home-page",
+    Lang
+  >;
+/** Content for Menu documents */
+interface MenuDocumentData {
+  /**
+   * Title field in *Menu*
+   *
+   * - **Field Type**: Title
+   * - **Placeholder**: Menu title...
+   * - **API ID Path**: menu.title
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+   *
+   */
+  title: prismic.TitleField;
+  /**
+   * Profile Image field in *Menu*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: menu.profileImage
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/image
+   *
+   */
+  profileImage: prismic.ImageField<never>;
+  /**
+   * Menu Links field in *Menu*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: menu.menu_links[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/group
+   *
+   */
+  menu_links: prismic.GroupField<Simplify<MenuDocumentDataMenuLinksItem>>;
+  /**
+   * GitHub Link field in *Menu*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: menu.githubLink
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+   *
+   */
+  githubLink: prismic.LinkField;
+  /**
+   * LinkedIn Link field in *Menu*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: menu.linkedInLink
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+   *
+   */
+  linkedInLink: prismic.LinkField;
+}
+/**
+ * Item in Menu → Menu Links
+ *
+ */
+export interface MenuDocumentDataMenuLinksItem {
+  /**
+   * Link Label field in *Menu → Menu Links*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: Link Label...
+   * - **API ID Path**: menu.menu_links[].label
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+   *
+   */
+  label: prismic.RichTextField;
+  /**
+   * Link field in *Menu → Menu Links*
+   *
+   * - **Field Type**: Content Relationship
+   * - **Placeholder**: *None*
+   * - **API ID Path**: menu.menu_links[].link
+   * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+   *
+   */
+  link: prismic.ContentRelationshipField<"home-page" | "page">;
+}
+/**
+ * Menu document from Prismic
+ *
+ * - **API ID**: `menu`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type MenuDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithoutUID<Simplify<MenuDocumentData>, "menu", Lang>;
+/** Content for Page documents */
+interface PageDocumentData {
+  /**
+   * Slice Zone field in *Page*
+   *
+   * - **Field Type**: Slice Zone
+   * - **Placeholder**: *None*
+   * - **API ID Path**: page.slices[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/slices
+   *
+   */
+  slices: prismic.SliceZone<PageDocumentDataSlicesSlice>;
+  /**
+   * Meta Title field in *Page*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: My title for Search Engine
+   * - **API ID Path**: page.meta_title
+   * - **Tab**: SEO Metadata
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  meta_title: prismic.KeyTextField;
+  /**
+   * Meta Description field in *Page*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: The description that will appear in search engine
+   * - **API ID Path**: page.meta_description
+   * - **Tab**: SEO Metadata
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  meta_description: prismic.KeyTextField;
+  /**
+   * `social_cards` field in *Page*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: page.social_cards[]
+   * - **Tab**: SEO Metadata
+   * - **Documentation**: https://prismic.io/docs/core-concepts/group
+   *
+   */
+  social_cards: prismic.GroupField<Simplify<PageDocumentDataSocialCardsItem>>;
+}
+/**
+ * Slice for *Page → Slice Zone*
+ *
+ */
+type PageDocumentDataSlicesSlice =
+  | CardSliceSlice
+  | BannerSliceSlice
+  | ExperienceCardsSliceSlice
+  | TimelineSliceSlice
+  | TextSliceSlice
+  | GoogleFormSliceSlice
+  | CardSlice
+  | FullWidthImageSlice
+  | GoogleFormSlice
+  | TextSlice
+  | ExperienceCardsSlice
+  | FeaturedImageSlice
+  | TimelineSlice
+  | BannerSlice;
+/**
+ * Item in Page → `social_cards`
+ *
+ */
+export interface PageDocumentDataSocialCardsItem {
+  /**
+   * Social Card Image field in *Page → `social_cards`*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: page.social_cards[].social_card_image
+   * - **Documentation**: https://prismic.io/docs/core-concepts/image
+   *
+   */
+  social_card_image: prismic.ImageField<never>;
+  /**
+   * Social Card Title field in *Page → `social_cards`*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: page.social_cards[].social_card_title
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  social_card_title: prismic.KeyTextField;
+  /**
+   * Social card description field in *Page → `social_cards`*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: page.social_cards[].social_card_description
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  social_card_description: prismic.KeyTextField;
+}
+/**
+ * Page document from Prismic
+ *
+ * - **API ID**: `page`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type PageDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithUID<Simplify<PageDocumentData>, "page", Lang>;
+export type AllDocumentTypes =
+  | FooterDocument
+  | HomePageDocument
+  | MenuDocument
+  | PageDocument;
 /**
  * Primary content in Banner → Primary
  *
@@ -966,10 +1372,26 @@ declare module "@prismicio/client" {
     (
       repositoryNameOrEndpoint: string,
       options?: prismic.ClientConfig
-    ): prismic.Client;
+    ): prismic.Client<AllDocumentTypes>;
   }
   namespace Content {
     export type {
+      FooterDocumentData,
+      FooterDocumentDataNavLinksItem,
+      FooterDocumentDataTextsItem,
+      FooterDocument,
+      HomePageDocumentData,
+      HomePageDocumentDataSlicesSlice,
+      HomePageDocumentDataSocialCardsItem,
+      HomePageDocument,
+      MenuDocumentData,
+      MenuDocumentDataMenuLinksItem,
+      MenuDocument,
+      PageDocumentData,
+      PageDocumentDataSlicesSlice,
+      PageDocumentDataSocialCardsItem,
+      PageDocument,
+      AllDocumentTypes,
       BannerSliceDefaultPrimary,
       BannerSliceDefault,
       BannerSliceHalfBannerPrimary,
