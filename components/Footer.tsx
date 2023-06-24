@@ -1,20 +1,21 @@
 import React from 'react'
-import { Link, RichText } from "prismic-reactjs";
-import { Nav } from "react-bootstrap";
+import * as prismic from '@prismicio/client'
+import { Nav } from 'react-bootstrap'
+import type { FooterDocument } from '@/prismicio-types'
 
-const Footer = ({ footer = {} }) => (
+const Footer = ({ footer }: { footer: FooterDocument }) => (
   <section className="footer-section">
     <div className="footer-nav">
       <Nav className="justify-content-center">
         {footer.data.navLinks.map((navLink) => (
-          <Nav.Item key={RichText.asText(navLink.label)}>
-            <Nav.Link href={Link.url(navLink.link)}>{RichText.asText(navLink.label)}</Nav.Link>
+          <Nav.Item key={prismic.asText(navLink.label)}>
+            <Nav.Link href={String(prismic.asLink(navLink.link))}>{prismic.asText(navLink.label)}</Nav.Link>
           </Nav.Item>
         ))}
       </Nav>
     </div>
     <div className="footer-text">
-      {footer.data.texts.map((text) => <p key={RichText.asText(text.text)}>{RichText.asText(text.text)}</p>)}
+      {footer.data.texts.map((text) => <p key={prismic.asText(text.text)}>{prismic.asText(text.text)}</p>)}
     </div>
     <style jsx>{`
       .footer-section {

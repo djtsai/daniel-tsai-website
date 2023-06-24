@@ -30,9 +30,9 @@ const ExperienceCards = ({ slice }: ExperienceCardsProps): JSX.Element => {
                         {asText(item.job_title)} ({item.date_string})
                       </Card.Title>
                   )}
-                  <Card.Text>
+                  <div>
                     <PrismicRichText field={item.description} />
-                  </Card.Text>
+                  </div>
                 </Card.Body>
               </Card>
             </div>

@@ -22,7 +22,7 @@ const FeaturedImage = ({ slice }: FeaturedImageProps): JSX.Element => {
           <Row>
             <Col md={6}>
               <div className="featured-image">
-                <PrismicImage field={slice.primary.featuredImage} />
+                <PrismicImage field={slice.primary.featuredImage} width={320} />
               </div>
             </Col>
             <Col md={6}>

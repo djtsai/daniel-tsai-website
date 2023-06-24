@@ -1,4 +1,5 @@
 import React from 'react'
+import { asText } from '@prismicio/client'
 import { PrismicRichText } from '@prismicio/react'
 import { Card, CardGroup } from 'react-bootstrap'
 
@@ -7,14 +8,14 @@ const CardSlice = ({ slice }) => (
     <div className="card-content container">
       <CardGroup>
         {slice.items.map((item, i) => (
-          <Card key={item.cardTitle}>
+          <Card key={asText(item.cardTitle)}>
             <Card.Header>
               <PrismicRichText field={item.cardTitle} />
             </Card.Header>
             <Card.Body>
-              <Card.Text>
+              <div>
                 <PrismicRichText field={item.cardDescription} />
-              </Card.Text>
+              </div>
             </Card.Body>
           </Card>
         ))}

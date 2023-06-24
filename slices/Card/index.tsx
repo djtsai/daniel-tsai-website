@@ -1,4 +1,4 @@
-import { Content } from '@prismicio/client'
+import { asText, Content } from '@prismicio/client'
 import { PrismicRichText, SliceComponentProps } from '@prismicio/react'
 import { Card as BootstrapCard, CardGroup } from 'react-bootstrap'
 
@@ -20,14 +20,14 @@ const Card = ({ slice }: CardProps): JSX.Element => {
       <div className="card-content container">
         <CardGroup>
           {slice.items.map((item, i) => (
-            <BootstrapCard key={item.card_title.toString()}>
+            <BootstrapCard key={asText(item.card_title)}>
               <BootstrapCard.Header>
                 <PrismicRichText field={item.card_title} />
               </BootstrapCard.Header>
               <BootstrapCard.Body>
-                <BootstrapCard.Text>
+                <div>
                   <PrismicRichText field={item.card_description} />
-                </BootstrapCard.Text>
+                </div>
               </BootstrapCard.Body>
             </BootstrapCard>
           ))}

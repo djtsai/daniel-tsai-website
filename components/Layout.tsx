@@ -1,10 +1,16 @@
-import React from "react";
-import Head from "next/head";
+import React, { PropsWithChildren } from 'react'
+import Head from 'next/head'
 import Header from './Header'
 import Footer from './Footer'
 import ExitPreviewButton from './ExitPreviewButton'
+import type { FooterDocument, MenuDocument } from '@/prismicio-types'
 
-const Layout = ({ children, menu, footer }) => {
+type LayoutProps = {
+  menu: MenuDocument,
+  footer: FooterDocument
+}
+
+const Layout = ({ children, menu, footer }: PropsWithChildren<LayoutProps>) => {
   return (
     <div>
       <Head>
@@ -15,7 +21,7 @@ const Layout = ({ children, menu, footer }) => {
       <Footer footer={footer} />
       <ExitPreviewButton />
     </div>
-  );
-};
+  )
+}
 
-export default Layout;
+export default Layout

@@ -18,9 +18,9 @@ const ExperienceCardsSlice = ({ slice }) => (
                   {prismic.asText(item.jobTitle)} ({item.dateString})
                 </Card.Title>
               )}
-              <Card.Text>
+              <div>
                 <PrismicRichText field={item.description} />
-              </Card.Text>
+              </div>
             </Card.Body>
           </Card>
         </div>
