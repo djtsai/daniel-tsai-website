@@ -1,5 +1,6 @@
 import React from 'react'
-import { RichText } from 'prismic-reactjs'
+import * as prismic from '@prismicio/client'
+import { PrismicRichText } from '@prismicio/react'
 import { Card } from 'react-bootstrap'
 
 const ExperienceCardsSlice = ({ slice }) => (
@@ -9,16 +10,16 @@ const ExperienceCardsSlice = ({ slice }) => (
         <div key={item.dateString} className="experience-card">
           <Card>
             <Card.Header>
-              <RichText render={item.companyName} />
+              <PrismicRichText field={item.companyName} />
             </Card.Header>
             <Card.Body>
-              {RichText.asText(item.jobTitle) && (
+              {prismic.asText(item.jobTitle) && (
                 <Card.Title>
-                  {RichText.asText(item.jobTitle)} ({item.dateString})
+                  {prismic.asText(item.jobTitle)} ({item.dateString})
                 </Card.Title>
               )}
               <Card.Text>
-                <RichText render={item.description} />
+                <PrismicRichText field={item.description} />
               </Card.Text>
             </Card.Body>
           </Card>

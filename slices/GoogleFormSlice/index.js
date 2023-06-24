@@ -1,9 +1,9 @@
 import React from 'react'
-import { Link } from 'prismic-reactjs'
+import { asLink } from '@prismicio/client'
 
 const GoogleFormSlice = ({ slice }) => (
   <section className="google-form-section">
-    <iframe className="google-form-content" src={`${ Link.url(slice.primary.googleFormLink) }?embedded=true`} width="100%" height="800px" scrolling="no" frameBorder="0" marginHeight="0" marginWidth="0">
+    <iframe className="google-form-content" src={`${ asLink(slice.primary.googleFormLink) }?embedded=true`} width="100%" height="800px" scrolling="no" frameBorder="0" marginHeight="0" marginWidth="0">
       Loading...
     </iframe>
     <style jsx>{`

@@ -1,0 +1,64 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"company_name",
+						{
+							"__TYPE__": "StructuredTextContent",
+							"value": [
+								{
+									"type": "heading4",
+									"content": {
+										"text": "Wrote"
+									}
+								}
+							]
+						}
+					],
+					[
+						"job_title",
+						{
+							"__TYPE__": "StructuredTextContent",
+							"value": [
+								{
+									"type": "heading5",
+									"content": {
+										"text": "Yourself"
+									}
+								}
+							]
+						}
+					],
+					[
+						"date_string",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "different",
+							"type": "Text"
+						}
+					],
+					[
+						"description",
+						{
+							"__TYPE__": "StructuredTextContent",
+							"value": [
+								{
+									"type": "paragraph",
+									"content": {
+										"text": "Culpa laboris quis consectetur tempor."
+									}
+								}
+							]
+						}
+					]
+				]
+			}
+		]
+	}
+]

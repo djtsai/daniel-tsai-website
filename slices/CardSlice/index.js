@@ -1,6 +1,6 @@
 import React from 'react'
-import { RichText } from 'prismic-reactjs'
-import { Card, CardGroup } from "react-bootstrap";
+import { PrismicRichText } from '@prismicio/react'
+import { Card, CardGroup } from 'react-bootstrap'
 
 const CardSlice = ({ slice }) => (
   <section className="card-section">
@@ -9,11 +9,11 @@ const CardSlice = ({ slice }) => (
         {slice.items.map((item, i) => (
           <Card key={item.cardTitle}>
             <Card.Header>
-              <RichText render={item.cardTitle} />
+              <PrismicRichText field={item.cardTitle} />
             </Card.Header>
             <Card.Body>
               <Card.Text>
-                <RichText render={item.cardDescription} />
+                <PrismicRichText field={item.cardDescription} />
               </Card.Text>
             </Card.Body>
           </Card>

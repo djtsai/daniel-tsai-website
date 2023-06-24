@@ -1,0 +1,46 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"date_string",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "join",
+							"type": "Text"
+						}
+					],
+					[
+						"title",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "known",
+							"type": "Text"
+						}
+					],
+					[
+						"subtitle",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "planning",
+							"type": "Text"
+						}
+					],
+					[
+						"description",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "language",
+							"type": "Text"
+						}
+					]
+				]
+			}
+		]
+	}
+]

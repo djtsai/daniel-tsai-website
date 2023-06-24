@@ -1,78 +1,82 @@
 {
-  "id": "banner_slice",
+  "id": "banner",
   "type": "SharedSlice",
-  "name": "BannerSlice",
-  "description": "BannerSlice",
+  "name": "Banner",
+  "description": "Banner",
   "variations": [
     {
-      "id": "default-slice",
-      "name": "Default slice",
+      "id": "default",
+      "name": "Default",
       "docURL": "...",
-      "version": "sktwi1xtmkfgx8626",
-      "description": "BannerSlice",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
       "primary": {
         "title": {
           "type": "StructuredText",
           "config": {
-            "single": "heading1",
             "label": "Title",
-            "placeholder": "This is where it all begins..."
+            "placeholder": "This is where it all begins...",
+            "allowTargetBlank": true,
+            "single": "heading1"
           }
         },
         "description": {
           "type": "StructuredText",
           "config": {
-            "single": "paragraph",
             "label": "Description",
-            "placeholder": "A nice description of your feature"
+            "placeholder": "A nice description of your feature",
+            "allowTargetBlank": true,
+            "single": "paragraph"
           }
         },
         "background": {
+          "type": "Image",
           "config": {
             "label": "Background",
             "constraint": {},
             "thumbnails": []
-          },
-          "type": "Image"
+          }
         }
       },
-      "items": {},
-      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+      "items": {}
     },
     {
       "id": "halfBanner",
       "name": "Half Banner",
       "docURL": "...",
-      "version": "sktwi1xtmkfgx8626",
-      "description": "BannerSlice",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
       "primary": {
         "title": {
           "type": "StructuredText",
           "config": {
-            "single": "heading1",
             "label": "Title",
-            "placeholder": "This is where it all begins..."
+            "placeholder": "This is where it all begins...",
+            "allowTargetBlank": true,
+            "single": "heading1"
           }
         },
         "description": {
           "type": "StructuredText",
           "config": {
-            "single": "paragraph",
             "label": "Description",
-            "placeholder": "A nice description of your feature"
+            "placeholder": "A nice description of your feature",
+            "allowTargetBlank": true,
+            "single": "paragraph"
           }
         },
         "background": {
+          "type": "Image",
           "config": {
             "label": "Background",
             "constraint": {},
             "thumbnails": []
-          },
-          "type": "Image"
+          }
         }
       },
-      "items": {},
-      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+      "items": {}
     }
   ]
 }

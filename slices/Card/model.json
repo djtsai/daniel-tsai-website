@@ -1,0 +1,37 @@
+{
+  "id": "card",
+  "type": "SharedSlice",
+  "name": "Card",
+  "description": "Card",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {},
+      "items": {
+        "card_title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Card Title",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "heading4,heading5,heading6"
+          }
+        },
+        "card_description": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Card Description",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "list-item"
+          }
+        }
+      }
+    }
+  ]
+}

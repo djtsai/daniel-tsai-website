@@ -1,9 +1,9 @@
 import React from 'react'
-import { RichText } from 'prismic-reactjs'
+import { PrismicRichText } from '@prismicio/react'
 
 const TextSlice = ({ slice }) => (
   <section className="text-section">
-    <RichText render={slice.primary.text} />
+    <PrismicRichText field={slice.primary.text} />
   </section>
 )
 

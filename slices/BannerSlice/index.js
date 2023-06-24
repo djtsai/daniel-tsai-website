@@ -1,12 +1,13 @@
 import React from 'react'
-import { RichText } from 'prismic-reactjs'
+import * as prismic from '@prismicio/client'
+import { PrismicRichText } from '@prismicio/react'
 
 const BannerSlice = ({ slice }) => (
   <section className="banner-section">
     <div className="banner-content container">
-      <h1 className="banner-title">{RichText.asText(slice.primary.title)}</h1>
+      <h1 className="banner-title">{prismic.asText(slice.primary.title)}</h1>
       <div className="banner-description">
-        <RichText render={slice.primary.description} />
+        <PrismicRichText field={slice.primary.description} />
       </div>
     </div>
     <style jsx>{`
