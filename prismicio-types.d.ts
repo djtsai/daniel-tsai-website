@@ -141,8 +141,6 @@ interface HomePageDocumentData {
  *
  */
 type HomePageDocumentDataSlicesSlice =
-  | BannerSliceSlice
-  | TextSliceSlice
   | FullWidthImageSlice
   | BannerSlice
   | FeaturedImageSlice
@@ -345,12 +343,6 @@ interface PageDocumentData {
  *
  */
 type PageDocumentDataSlicesSlice =
-  | CardSliceSlice
-  | BannerSliceSlice
-  | ExperienceCardsSliceSlice
-  | TimelineSliceSlice
-  | TextSliceSlice
-  | GoogleFormSliceSlice
   | CardSlice
   | FullWidthImageSlice
   | GoogleFormSlice
@@ -524,123 +516,6 @@ type BannerSliceVariation = BannerSliceDefault | BannerSliceHalfBanner;
  */
 export type BannerSlice = prismic.SharedSlice<"banner", BannerSliceVariation>;
 /**
- * Primary content in BannerSlice → Primary
- *
- */
-interface BannerSliceSliceDefaultSlicePrimary {
-  /**
-   * Title field in *BannerSlice → Primary*
-   *
-   * - **Field Type**: Title
-   * - **Placeholder**: This is where it all begins...
-   * - **API ID Path**: banner_slice.primary.title
-   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
-   *
-   */
-  title: prismic.TitleField;
-  /**
-   * Description field in *BannerSlice → Primary*
-   *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: A nice description of your feature
-   * - **API ID Path**: banner_slice.primary.description
-   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
-   *
-   */
-  description: prismic.RichTextField;
-  /**
-   * Background field in *BannerSlice → Primary*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: banner_slice.primary.background
-   * - **Documentation**: https://prismic.io/docs/core-concepts/image
-   *
-   */
-  background: prismic.ImageField<never>;
-}
-/**
- * Default slice variation for BannerSlice Slice
- *
- * - **API ID**: `default-slice`
- * - **Description**: `BannerSlice`
- * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
- *
- */
-export type BannerSliceSliceDefaultSlice = prismic.SharedSliceVariation<
-  "default-slice",
-  Simplify<BannerSliceSliceDefaultSlicePrimary>,
-  never
->;
-/**
- * Primary content in BannerSlice → Primary
- *
- */
-interface BannerSliceSliceHalfBannerPrimary {
-  /**
-   * Title field in *BannerSlice → Primary*
-   *
-   * - **Field Type**: Title
-   * - **Placeholder**: This is where it all begins...
-   * - **API ID Path**: banner_slice.primary.title
-   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
-   *
-   */
-  title: prismic.TitleField;
-  /**
-   * Description field in *BannerSlice → Primary*
-   *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: A nice description of your feature
-   * - **API ID Path**: banner_slice.primary.description
-   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
-   *
-   */
-  description: prismic.RichTextField;
-  /**
-   * Background field in *BannerSlice → Primary*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: banner_slice.primary.background
-   * - **Documentation**: https://prismic.io/docs/core-concepts/image
-   *
-   */
-  background: prismic.ImageField<never>;
-}
-/**
- * Half Banner variation for BannerSlice Slice
- *
- * - **API ID**: `halfBanner`
- * - **Description**: `BannerSlice`
- * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
- *
- */
-export type BannerSliceSliceHalfBanner = prismic.SharedSliceVariation<
-  "halfBanner",
-  Simplify<BannerSliceSliceHalfBannerPrimary>,
-  never
->;
-/**
- * Slice variation for *BannerSlice*
- *
- */
-type BannerSliceSliceVariation =
-  | BannerSliceSliceDefaultSlice
-  | BannerSliceSliceHalfBanner;
-/**
- * BannerSlice Shared Slice
- *
- * - **API ID**: `banner_slice`
- * - **Description**: `BannerSlice`
- * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
- *
- */
-export type BannerSliceSlice = prismic.SharedSlice<
-  "banner_slice",
-  BannerSliceSliceVariation
->;
-/**
  * Item in Card → Items
  *
  */
@@ -693,62 +568,6 @@ type CardSliceVariation = CardSliceDefault;
  *
  */
 export type CardSlice = prismic.SharedSlice<"card", CardSliceVariation>;
-/**
- * Item in CardSlice → Items
- *
- */
-export interface CardSliceSliceDefaultSliceItem {
-  /**
-   * Card Title field in *CardSlice → Items*
-   *
-   * - **Field Type**: Title
-   * - **Placeholder**: *None*
-   * - **API ID Path**: card_slice.items[].cardTitle
-   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
-   *
-   */
-  cardTitle: prismic.TitleField;
-  /**
-   * Card Description field in *CardSlice → Items*
-   *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: card_slice.items[].cardDescription
-   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
-   *
-   */
-  cardDescription: prismic.RichTextField;
-}
-/**
- * Default slice variation for CardSlice Slice
- *
- * - **API ID**: `default-slice`
- * - **Description**: `CardSlice`
- * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
- *
- */
-export type CardSliceSliceDefaultSlice = prismic.SharedSliceVariation<
-  "default-slice",
-  Record<string, never>,
-  Simplify<CardSliceSliceDefaultSliceItem>
->;
-/**
- * Slice variation for *CardSlice*
- *
- */
-type CardSliceSliceVariation = CardSliceSliceDefaultSlice;
-/**
- * CardSlice Shared Slice
- *
- * - **API ID**: `card_slice`
- * - **Description**: `CardSlice`
- * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
- *
- */
-export type CardSliceSlice = prismic.SharedSlice<
-  "card_slice",
-  CardSliceSliceVariation
->;
 /**
  * Item in ExperienceCards → Items
  *
@@ -824,83 +643,6 @@ type ExperienceCardsSliceVariation = ExperienceCardsSliceDefault;
 export type ExperienceCardsSlice = prismic.SharedSlice<
   "experience_cards",
   ExperienceCardsSliceVariation
->;
-/**
- * Item in ExperienceCardsSlice → Items
- *
- */
-export interface ExperienceCardsSliceSliceDefaultSliceItem {
-  /**
-   * Company Name field in *ExperienceCardsSlice → Items*
-   *
-   * - **Field Type**: Title
-   * - **Placeholder**: *None*
-   * - **API ID Path**: experience_cards_slice.items[].companyName
-   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
-   *
-   */
-  companyName: prismic.TitleField;
-  /**
-   * Job Title field in *ExperienceCardsSlice → Items*
-   *
-   * - **Field Type**: Title
-   * - **Placeholder**: *None*
-   * - **API ID Path**: experience_cards_slice.items[].jobTitle
-   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
-   *
-   */
-  jobTitle: prismic.TitleField;
-  /**
-   * Date String field in *ExperienceCardsSlice → Items*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: experience_cards_slice.items[].dateString
-   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-   *
-   */
-  dateString: prismic.KeyTextField;
-  /**
-   * Description field in *ExperienceCardsSlice → Items*
-   *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: experience_cards_slice.items[].description
-   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
-   *
-   */
-  description: prismic.RichTextField;
-}
-/**
- * Default slice variation for ExperienceCardsSlice Slice
- *
- * - **API ID**: `default-slice`
- * - **Description**: `ExperienceCardsSlice`
- * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
- *
- */
-export type ExperienceCardsSliceSliceDefaultSlice =
-  prismic.SharedSliceVariation<
-    "default-slice",
-    Record<string, never>,
-    Simplify<ExperienceCardsSliceSliceDefaultSliceItem>
-  >;
-/**
- * Slice variation for *ExperienceCardsSlice*
- *
- */
-type ExperienceCardsSliceSliceVariation = ExperienceCardsSliceSliceDefaultSlice;
-/**
- * ExperienceCardsSlice Shared Slice
- *
- * - **API ID**: `experience_cards_slice`
- * - **Description**: `ExperienceCardsSlice`
- * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
- *
- */
-export type ExperienceCardsSliceSlice = prismic.SharedSlice<
-  "experience_cards_slice",
-  ExperienceCardsSliceSliceVariation
 >;
 /**
  * Primary content in FeaturedImage → Primary
@@ -1081,52 +823,6 @@ export type GoogleFormSlice = prismic.SharedSlice<
   GoogleFormSliceVariation
 >;
 /**
- * Primary content in GoogleFormSlice → Primary
- *
- */
-interface GoogleFormSliceSliceDefaultSlicePrimary {
-  /**
-   * Google Form Link field in *GoogleFormSlice → Primary*
-   *
-   * - **Field Type**: Link
-   * - **Placeholder**: *None*
-   * - **API ID Path**: google_form_slice.primary.googleFormLink
-   * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
-   *
-   */
-  googleFormLink: prismic.LinkField;
-}
-/**
- * Default slice variation for GoogleFormSlice Slice
- *
- * - **API ID**: `default-slice`
- * - **Description**: `GoogleFormSlice`
- * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
- *
- */
-export type GoogleFormSliceSliceDefaultSlice = prismic.SharedSliceVariation<
-  "default-slice",
-  Simplify<GoogleFormSliceSliceDefaultSlicePrimary>,
-  never
->;
-/**
- * Slice variation for *GoogleFormSlice*
- *
- */
-type GoogleFormSliceSliceVariation = GoogleFormSliceSliceDefaultSlice;
-/**
- * GoogleFormSlice Shared Slice
- *
- * - **API ID**: `google_form_slice`
- * - **Description**: `GoogleFormSlice`
- * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
- *
- */
-export type GoogleFormSliceSlice = prismic.SharedSlice<
-  "google_form_slice",
-  GoogleFormSliceSliceVariation
->;
-/**
  * Primary content in Text → Primary
  *
  */
@@ -1169,52 +865,6 @@ type TextSliceVariation = TextSliceDefault;
  *
  */
 export type TextSlice = prismic.SharedSlice<"text", TextSliceVariation>;
-/**
- * Primary content in TextSlice → Primary
- *
- */
-interface TextSliceSliceDefaultSlicePrimary {
-  /**
-   * Text field in *TextSlice → Primary*
-   *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: text_slice.primary.text
-   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
-   *
-   */
-  text: prismic.RichTextField;
-}
-/**
- * Default slice variation for TextSlice Slice
- *
- * - **API ID**: `default-slice`
- * - **Description**: `TextSlice`
- * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
- *
- */
-export type TextSliceSliceDefaultSlice = prismic.SharedSliceVariation<
-  "default-slice",
-  Simplify<TextSliceSliceDefaultSlicePrimary>,
-  never
->;
-/**
- * Slice variation for *TextSlice*
- *
- */
-type TextSliceSliceVariation = TextSliceSliceDefaultSlice;
-/**
- * TextSlice Shared Slice
- *
- * - **API ID**: `text_slice`
- * - **Description**: `TextSlice`
- * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
- *
- */
-export type TextSliceSlice = prismic.SharedSlice<
-  "text_slice",
-  TextSliceSliceVariation
->;
 /**
  * Item in Timeline → Items
  *
@@ -1291,82 +941,6 @@ export type TimelineSlice = prismic.SharedSlice<
   "timeline",
   TimelineSliceVariation
 >;
-/**
- * Item in TimelineSlice → Items
- *
- */
-export interface TimelineSliceSliceDefaultSliceItem {
-  /**
-   * Date String field in *TimelineSlice → Items*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: timeline_slice.items[].dateString
-   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-   *
-   */
-  dateString: prismic.KeyTextField;
-  /**
-   * Title field in *TimelineSlice → Items*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: timeline_slice.items[].title
-   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-   *
-   */
-  title: prismic.KeyTextField;
-  /**
-   * Subtitle field in *TimelineSlice → Items*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: timeline_slice.items[].subtitle
-   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-   *
-   */
-  subtitle: prismic.KeyTextField;
-  /**
-   * Description field in *TimelineSlice → Items*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: timeline_slice.items[].description
-   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-   *
-   */
-  description: prismic.KeyTextField;
-}
-/**
- * Default slice variation for TimelineSlice Slice
- *
- * - **API ID**: `default-slice`
- * - **Description**: `TimelineSlice`
- * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
- *
- */
-export type TimelineSliceSliceDefaultSlice = prismic.SharedSliceVariation<
-  "default-slice",
-  Record<string, never>,
-  Simplify<TimelineSliceSliceDefaultSliceItem>
->;
-/**
- * Slice variation for *TimelineSlice*
- *
- */
-type TimelineSliceSliceVariation = TimelineSliceSliceDefaultSlice;
-/**
- * TimelineSlice Shared Slice
- *
- * - **API ID**: `timeline_slice`
- * - **Description**: `TimelineSlice`
- * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
- *
- */
-export type TimelineSliceSlice = prismic.SharedSlice<
-  "timeline_slice",
-  TimelineSliceSliceVariation
->;
 declare module "@prismicio/client" {
   interface CreateClient {
     (
@@ -1398,28 +972,14 @@ declare module "@prismicio/client" {
       BannerSliceHalfBanner,
       BannerSliceVariation,
       BannerSlice,
-      BannerSliceSliceDefaultSlicePrimary,
-      BannerSliceSliceDefaultSlice,
-      BannerSliceSliceHalfBannerPrimary,
-      BannerSliceSliceHalfBanner,
-      BannerSliceSliceVariation,
-      BannerSliceSlice,
       CardSliceDefaultItem,
       CardSliceDefault,
       CardSliceVariation,
       CardSlice,
-      CardSliceSliceDefaultSliceItem,
-      CardSliceSliceDefaultSlice,
-      CardSliceSliceVariation,
-      CardSliceSlice,
       ExperienceCardsSliceDefaultItem,
       ExperienceCardsSliceDefault,
       ExperienceCardsSliceVariation,
       ExperienceCardsSlice,
-      ExperienceCardsSliceSliceDefaultSliceItem,
-      ExperienceCardsSliceSliceDefaultSlice,
-      ExperienceCardsSliceSliceVariation,
-      ExperienceCardsSliceSlice,
       FeaturedImageSliceDefaultSlicePrimary,
       FeaturedImageSliceDefaultSlice,
       FeaturedImageSliceVariation,
@@ -1432,26 +992,14 @@ declare module "@prismicio/client" {
       GoogleFormSliceDefault,
       GoogleFormSliceVariation,
       GoogleFormSlice,
-      GoogleFormSliceSliceDefaultSlicePrimary,
-      GoogleFormSliceSliceDefaultSlice,
-      GoogleFormSliceSliceVariation,
-      GoogleFormSliceSlice,
       TextSliceDefaultPrimary,
       TextSliceDefault,
       TextSliceVariation,
       TextSlice,
-      TextSliceSliceDefaultSlicePrimary,
-      TextSliceSliceDefaultSlice,
-      TextSliceSliceVariation,
-      TextSliceSlice,
       TimelineSliceDefaultItem,
       TimelineSliceDefault,
       TimelineSliceVariation,
       TimelineSlice,
-      TimelineSliceSliceDefaultSliceItem,
-      TimelineSliceSliceDefaultSlice,
-      TimelineSliceSliceVariation,
-      TimelineSliceSlice,
     };
   }
 }

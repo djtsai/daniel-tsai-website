@@ -4,17 +4,11 @@ import dynamic from "next/dynamic";
 
 export const components = {
   banner: dynamic(() => import("./Banner")),
-  banner_slice: dynamic(() => import("./BannerSlice")),
   card: dynamic(() => import("./Card")),
-  card_slice: dynamic(() => import("./CardSlice")),
   experience_cards: dynamic(() => import("./ExperienceCards")),
-  experience_cards_slice: dynamic(() => import("./ExperienceCardsSlice")),
   featured_image: dynamic(() => import("./FeaturedImage")),
   full_width_image: dynamic(() => import("./FullWidthImage")),
   google_form: dynamic(() => import("./GoogleForm")),
-  google_form_slice: dynamic(() => import("./GoogleFormSlice")),
   text: dynamic(() => import("./Text")),
-  text_slice: dynamic(() => import("./TextSlice")),
   timeline: dynamic(() => import("./Timeline")),
-  timeline_slice: dynamic(() => import("./TimelineSlice")),
 };
