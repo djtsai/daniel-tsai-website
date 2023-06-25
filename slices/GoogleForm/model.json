@@ -1,0 +1,27 @@
+{
+  "id": "google_form",
+  "type": "SharedSlice",
+  "name": "GoogleForm",
+  "description": "GoogleForm",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "google_form_link": {
+          "type": "Link",
+          "config": {
+            "label": "Google Form Link",
+            "placeholder": "",
+            "select": null
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

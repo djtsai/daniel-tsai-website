@@ -1,0 +1,42 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"card_title",
+						{
+							"__TYPE__": "StructuredTextContent",
+							"value": [
+								{
+									"type": "heading4",
+									"content": {
+										"text": "Cabin"
+									}
+								}
+							]
+						}
+					],
+					[
+						"card_description",
+						{
+							"__TYPE__": "StructuredTextContent",
+							"value": [
+								{
+									"type": "paragraph",
+									"content": {
+										"text": "Lorem ut nostrud ut sunt ullamco."
+									}
+								}
+							]
+						}
+					]
+				]
+			}
+		]
+	}
+]

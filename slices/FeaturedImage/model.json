@@ -33,33 +33,25 @@
           "config": {
             "label": "Link",
             "select": "document",
-            "customtypes": [
-              "home-page",
-              "page"
-            ]
+            "customtypes": ["home-page", "page"]
           },
           "type": "Link"
         },
         "linkLabel": {
-          "config": {
-            "label": "Link Label",
-            "placeholder": ""
-          },
+          "config": { "label": "Link Label", "placeholder": "" },
           "type": "Text"
         },
         "featuredImage": {
           "config": {
             "label": "Featured Image",
-            "constraint": {
-              "width": null,
-              "height": 320
-            },
+            "constraint": { "width": null, "height": 320 },
             "thumbnails": []
           },
           "type": "Image"
         }
       },
-      "items": {}
+      "items": {},
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
     }
   ]
 }

@@ -2,6 +2,8 @@
   "id": "page",
   "label": "Page",
   "repeatable": true,
+  "status": true,
+  "format": "page",
   "json": {
     "Main": {
       "uid": {
@@ -16,30 +18,14 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
-            "banner_slice": {
-              "type": "SharedSlice"
-            },
-            "full_width_image": {
-              "type": "SharedSlice"
-            },
-            "text_slice": {
-              "type": "SharedSlice"
-            },
-            "timeline_slice": {
-              "type": "SharedSlice"
-            },
-            "featured_image": {
-              "type": "SharedSlice"
-            },
-            "card_slice": {
-              "type": "SharedSlice"
-            },
-            "google_form_slice": {
-              "type": "SharedSlice"
-            },
-            "experience_cards_slice": {
-              "type": "SharedSlice"
-            }
+            "card": { "type": "SharedSlice" },
+            "full_width_image": { "type": "SharedSlice" },
+            "google_form": { "type": "SharedSlice" },
+            "text": { "type": "SharedSlice" },
+            "experience_cards": { "type": "SharedSlice" },
+            "featured_image": { "type": "SharedSlice" },
+            "timeline": { "type": "SharedSlice" },
+            "banner": { "type": "SharedSlice" }
           }
         }
       }
@@ -62,7 +48,6 @@
       "social_cards": {
         "type": "Group",
         "config": {
-          "type": "Group",
           "fields": {
             "social_card_image": {
               "type": "Image",
@@ -74,15 +59,11 @@
             },
             "social_card_title": {
               "type": "Text",
-              "config": {
-                "label": "Social Card Title"
-              }
+              "config": { "label": "Social Card Title" }
             },
             "social_card_description": {
               "type": "Text",
-              "config": {
-                "label": "Social card description"
-              }
+              "config": { "label": "Social card description" }
             }
           }
         }

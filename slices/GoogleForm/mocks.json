@@ -1,0 +1,16 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"google_form_link": {
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "https://docs.google.com/forms/d/e/1FAIpQLSedZRblK-U4TrOiexdlKcZESdWUx-fZKiTR7Sk3geYplqakQA/viewform"
+				}
+			}
+		},
+		"items": []
+	}
+]

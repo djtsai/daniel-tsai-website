@@ -3,21 +3,18 @@
   "label": "Footer",
   "repeatable": false,
   "status": true,
+  "format": "custom",
   "json": {
     "Main": {
       "navLinks": {
         "config": {
           "label": "Nav Links",
-          "placeholder": "",
           "fields": {
             "link": {
               "config": {
                 "label": "Link",
                 "select": "document",
-                "customtypes": [
-                  "home-page",
-                  "page"
-                ]
+                "customtypes": ["home-page", "page"]
               },
               "type": "Link"
             },
@@ -37,7 +34,6 @@
       "texts": {
         "config": {
           "label": "Texts",
-          "placeholder": "",
           "fields": {
             "text": {
               "config": {

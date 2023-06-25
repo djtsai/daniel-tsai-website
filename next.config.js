@@ -1,3 +1,6 @@
-const withTM = require("next-transpile-modules")(["next-slicezone"]);
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  reactStrictMode: true,
+}
 
-module.exports = withTM();
+module.exports = nextConfig

@@ -2,6 +2,8 @@
   "id": "menu",
   "label": "Menu",
   "repeatable": false,
+  "status": true,
+  "format": "custom",
   "json": {
     "Main": {
       "title": {
@@ -16,10 +18,7 @@
       "profileImage": {
         "config": {
           "label": "Profile Image",
-          "constraint": {
-            "width": 32,
-            "height": 32
-          },
+          "constraint": { "width": 32, "height": 32 },
           "thumbnails": []
         },
         "type": "Image"
@@ -40,10 +39,7 @@
               "config": {
                 "label": "Link",
                 "select": "document",
-                "customtypes": [
-                  "home-page",
-                  "page"
-                ]
+                "customtypes": ["home-page", "page"]
               },
               "type": "Link"
             }

@@ -1,0 +1,50 @@
+{
+  "id": "experience_cards",
+  "type": "SharedSlice",
+  "name": "ExperienceCards",
+  "description": "ExperienceCards",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {},
+      "items": {
+        "company_name": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Company Name",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "heading4,heading5,heading6"
+          }
+        },
+        "job_title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Job Title",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "heading5,heading6"
+          }
+        },
+        "date_string": {
+          "type": "Text",
+          "config": { "label": "Date String", "placeholder": "" }
+        },
+        "description": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Description",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,heading5,heading6,list-item"
+          }
+        }
+      }
+    }
+  ]
+}
