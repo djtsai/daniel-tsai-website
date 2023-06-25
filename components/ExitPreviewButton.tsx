@@ -1,5 +1,6 @@
 import React, { PropsWithChildren } from 'react'
 import { useRouter } from 'next/router'
+import Link from "next/link";
 
 export default function ExitPreviewButton({ children }: PropsWithChildren) {
   const { isPreview } = useRouter()
@@ -8,7 +9,7 @@ export default function ExitPreviewButton({ children }: PropsWithChildren) {
     <div>
       {children}
       {isPreview ? (
-        <a className="exit-button" href="/api/exit-preview">Exit Preview</a>
+        <Link className="exit-button" href="/api/exit-preview">Exit Preview</Link>
       ) : null}
       <style jsx>{`
         .exit-button {
