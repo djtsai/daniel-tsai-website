@@ -1,4 +1,3 @@
-import Head from 'next/head'
 import { notFound } from 'next/navigation'
 import { SliceZone } from '@prismicio/react'
 import Layout from '@/components/Layout'
@@ -32,10 +31,6 @@ export default async function Page({ params }: { params: Params }) {
 
   return (
     <Layout menu={menu} footer={footer}>
-      <Head>
-        <title>{page.data.meta_title}</title>
-        <meta name='description' content={String(page.data.meta_description)} />
-      </Head>
       <SliceZone slices={page.data.slices} components={components} />
     </Layout>
   )
