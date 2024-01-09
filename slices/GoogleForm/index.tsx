@@ -1,10 +1,11 @@
+'use client'
 import { asLink, Content } from '@prismicio/client'
 import { SliceComponentProps } from '@prismicio/react'
 
 /**
  * Props for `GoogleForm`.
  */
-export type GoogleFormProps = SliceComponentProps<Content.GoogleFormSlice>;
+export type GoogleFormProps = SliceComponentProps<Content.GoogleFormSlice>
 
 /**
  * Component for "GoogleForm" Slices.

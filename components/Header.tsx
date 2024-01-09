@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import * as prismic from '@prismicio/client'
 import { PrismicImage } from '@prismicio/react'
