@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation'
 import { SliceZone } from '@prismicio/react'
 import Layout from '@/components/Layout'
 import { createClient } from '@/prismicio'
+import { PageDocument } from '@/prismicio-types'
 import { components } from '@/slices'
 
 type Params = { uid: string }
@@ -34,4 +35,10 @@ export default async function Page({ params }: { params: Params }) {
       <SliceZone slices={page.data.slices} components={components} />
     </Layout>
   )
+}
+
+export async function generateStaticParams() {
+  const client = createClient()
+  const pages: PageDocument[] = await client.getAllByType('page')
+  return pages.map((page) => ({ uid: page.uid }))
 }
