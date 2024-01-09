@@ -1,3 +1,4 @@
+'use client'
 import { Content } from '@prismicio/client'
 import { PrismicImage, PrismicLink, PrismicRichText, SliceComponentProps } from '@prismicio/react'
 import { Col, Container, Row } from 'react-bootstrap'

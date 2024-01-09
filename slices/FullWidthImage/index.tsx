@@ -1,3 +1,4 @@
+'use client'
 import { Content } from '@prismicio/client'
 import { PrismicImage, SliceComponentProps } from '@prismicio/react'
 
@@ -5,7 +6,7 @@ import { PrismicImage, SliceComponentProps } from '@prismicio/react'
  * Props for `FullWidthImage`.
  */
 export type FullWidthImageProps =
-  SliceComponentProps<Content.FullWidthImageSlice>;
+  SliceComponentProps<Content.FullWidthImageSlice>
 
 /**
  * Component for "FullWidthImage" Slices.

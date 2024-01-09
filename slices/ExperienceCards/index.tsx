@@ -1,3 +1,4 @@
+'use client'
 import { asText, Content } from '@prismicio/client'
 import { PrismicRichText, SliceComponentProps } from '@prismicio/react'
 import { Card } from 'react-bootstrap'
